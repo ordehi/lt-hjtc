@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta pname="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lt-hjtc</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="./static/css/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./static/css/vendor/prism/prism.css" />
+    <link rel="stylesheet" href="./static/css/hjtc/popover.css" />
+  </head>
+  <body>
+    <div class="container-lg tc">
+      <div class="row">
+        <div class="col mt-3">
+          <h2>This is our Tracking Code</h2>
+
+          <pre
+            tabindex="0"
+            class="language-html"
+          ><code class="language-html line-numbers">&lt;script&gt;
+    &lt;!-- Hotjar Tracking Code for TEChnical Support Tests --&gt;
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:1440670,hjsv:6}; a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  &lt;/script&gt;</code></pre>
+        </div>
+        <div class="col mt-3">
+          <h2>But actually this is it</h2>
+          <pre
+            tabindex="0"
+            class="language-javascript line-numbers"
+          ><code class="language-javascript">(<span href="#" data-bs-toggle="popover" data-bs-custom-class="custom-popover" title="" data-bs-original-title="The Function keyword" data-bs-content="This is a JavaScript keyword that declares a <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions' target='_blank' rel='noopener'>function</a>. The whole TC is what they call an <a href='https://developer.mozilla.org/en-US/docs/Glossary/IIFE' target='_blank' rel='noopener'>IIFE</a> (pronounced 'iffy', but you shouldn't feel that way throughout this journey!)" data-bs-html="true">function</span>(<span href="#" data-bs-toggle="popover" data-bs-custom-class="custom-popover" title="" data-bs-original-title="Function Parameters" data-bs-content="These are <a href='https://developer.mozilla.org/en-US/docs/Glossary/Parameter' target='_blank' rel='noopener'>function parameters</a>, values that can be passed to the function. <br><br>They can be named anything, it could read <strong>(o, r, a, n, g, e)</strong> and it would still work as long as the same variable names are changed in the function body" data-bs-html="true">h,o,t,j,a,r</span>){
+    <span data-bs-toggle="popover" data-bs-custom-class="custom-popover" title="" data-bs-original-title="Property access" data-bs-content="An example of accessing the value of a property inside an object. In this case, the property <strong>hj</strong> is being accessed inside the 'h' variable/object which was passed into the function above as you saw" data-bs-html="true">h.hj</span><span data-bs-toggle="popover" data-bs-custom-class="custom-popover" title="" data-bs-original-title="Assignment (not a homework)" data-bs-content="When you put a value in a variable, it's called Variable Assignment. Here, we're saying that <strong>h.hj</strong> should be assigned the value <strong>h.hj</strong> (itself, if it exists). <br><br> Whenever you see statements like <strong>something = whatever</strong> that's an assignment, the trick is the single equals <strong>=</strong> sign. <em>More than one means something else.</em>" data-bs-html="true">=h.hj</span><span data-bs-toggle="popover" data-bs-custom-class="custom-popover" title="" data-bs-original-title="Logical OR operator" data-bs-content="When you want to say that something should happen when either of a pair (or more) conditions are <strong>true</strong> (<em>evaluate to true</em> is the proper term), you can use the Logical OR operator which in JS is simply <strong>||</strong> (two pipe characters).<br><br>Here, OR is saying that if <strong>h.hj=h.hj</strong> can't happen because that object doesn't exist yet (<em>evaluates to false</em>), then the expression to the right of the <strong>||</strong> should be assigned to <strong>h.hj</strong>.<br><br>This is useful because if Hotjar already loaded, we don't have to load it again and just assign the current Hotjar global to itself, but if this is the first time we try to load Hotjar, then everything to the right of the OR operator will run." data-bs-html="true">||function()</span>{(<span data-bs-toggle="popover" data-bs-custom-class="custom-popover" title="" data-bs-original-title="Queueing Hotjar calls" data-bs-content="Here we see a similar construct as we just saw, trying to assign a variable to itself if it exists, OR <strong>||</strong>  assigning it the value to the right of the pipes.<br><br>In this case, we're looking for the Hotjar <strong>q</strong> global (or the queue), which is an Array we use to store calls to APIs such as Events and User Attributes while Hotjar hasn't loaded fully so that they may be sent later to Hotjar once it loads.<br><br>The <strong>[]</strong> here means an Array literal that's empty." data-bs-html="true">h.hj.q=h.hj.q||[]</span>).<span data-bs-toggle="popover" data-bs-custom-class="custom-popover" title="" data-bs-original-title="Array.prototype.push()" data-bs-content="<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push' target='_blank' rel='noopener'>Push</a> is an Array method that <em>pushes</em> a value inside an array as the last index/element in that array, if the array is empty, it would be the first and last element, of course.<br><br><a href='https://developer.mozilla.org/en-US/docs/Glossary/Method' target='_blank' rel='noopener'>Method</a> is a very common term in programming, it means a function that is a property of an object. In JS, almost everything is an object or an instance of an object, including strings, numbers, and in this case, arrays." data-bs-html="true">push</span>(arguments)};
+    h._hjSettings={hjid:1440670,hjsv:6}; a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</code></pre>
+        </div>
+      </div>
+    </div>
+    <script src="./static/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./static/js/vendor/prismjs/prism.js"></script>
+    <script src="./static/js/hjtc/popover.js"></script>
+  </body>
+</html>
