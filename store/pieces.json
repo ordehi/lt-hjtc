@@ -1,0 +1,32 @@
+{
+  "function": {
+    "title": "The Function keyword",
+    "content": "This is a JavaScript keyword that declares a <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions' target='_blank' rel='noopener'>function</a>. The whole TC is what they call an <a href='https://developer.mozilla.org/en-US/docs/Glossary/IIFE' target='_blank' rel='noopener'>IIFE</a> (pronounced 'iffy', but you shouldn't feel that way throughout this journey!)"
+  },
+  "function-parameters": {
+    "title": "Function Parameters",
+    "content": "These are <a href='https://developer.mozilla.org/en-US/docs/Glossary/Parameter' target='_blank' rel='noopener'>function parameters</a>, values that can be passed to the function. <br><br>They can be named anything, it could read <strong>(o, r, a, n, g, e)</strong> and it would still work as long as the same variable names are changed in the function body"
+  },
+  "property-access": {
+    "title": "Property access",
+    "content": "An example of accessing the value of a property inside an object. In this case, the property <strong>hj</strong> is being accessed inside the 'h' variable/object which was passed into the function above as you saw"
+  },
+  "assignment": {
+    "title": "Assignment (not a homework)",
+    "content": "When you put a value in a variable, it's called Variable Assignment. Here, we're saying that <strong>h.hj</strong> should be assigned the value <strong>h.hj</strong> (itself, if it exists). <br><br> Whenever you see statements like <strong>something = whatever</strong> that's an assignment, the trick is the single equals <strong>=</strong> sign. <em>More than one means something else.</em>"
+  },
+  "logical-or": {
+    "title": "Logical OR operator",
+    "content": "When you want to say that something should happen when either of a pair (or more) conditions are <strong>true</strong> (<em>evaluate to true</em> is the proper term), you can use the Logical OR operator which in JS is simply <strong>||</strong> (two pipe characters).<br><br>Here, OR is saying that if <strong>h.hj=h.hj</strong> can't happen because that object doesn't exist yet (<em>evaluates to false</em>), then the expression to the right of the <strong>||</strong> should be assigned to <strong>h.hj</strong>.<br><br>This is useful because if Hotjar already loaded, we don't have to load it again and just assign the current Hotjar global to itself, but if this is the first time we try to load Hotjar, then everything to the right of the OR operator will run."
+  },
+  "queue": {
+    "title": "Queueing Hotjar calls",
+    "content": "Here we see a similar construct as we just saw, trying to assign a variable to itself if it exists, OR <strong>||</strong>  assigning it the value to the right of the pipes.<br><br>In this case, we're looking for the Hotjar <strong>q</strong> global (or the queue), which is an Array we use to store calls to APIs such as Events and User Attributes while Hotjar hasn't loaded fully so that they may be sent later to Hotjar once it loads.<br><br>The <strong>[]</strong> here means an Array literal that's empty."
+  },
+  "push": {
+    "title": "Array.prototype.push()",
+    "content": "<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push' target='_blank' rel='noopener'>Push</a> is an Array method that <em>pushes</em> a value inside an array as the last index/element in that array, if the array is empty, it would be the first and last element, of course.<br><br><a href='https://developer.mozilla.org/en-US/docs/Glossary/Method' target='_blank' rel='noopener'>Method</a> is a very common term in programming, it means a function that is a property of an object. In JS, almost everything is an object or an instance of an object, including strings, numbers, and in this case, arrays."
+  }
+}
+
+

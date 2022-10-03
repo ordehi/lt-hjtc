@@ -19,11 +19,11 @@
   color: var(--bs-primary);
 }
 
-[data-bs-toggle="popover"] {
+.piece {
   cursor: pointer;
 }
 
-[data-bs-toggle="popover"]:hover {
+.piece:hover {
   background-color: #f4364c;
 }
 
