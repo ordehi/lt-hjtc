@@ -32,3 +32,18 @@ strong {
   color: white;
   padding: 3px;
 }
+
+.line {
+  background-color: #f4364c;
+  color: white;
+  cursor: default;
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: #f4364c;
+  --bs-tooltip-max-width: max-content;
+}
+
+.custom-tooltip code {
+  color: white;
+}

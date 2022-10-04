@@ -1,0 +1,47 @@
+{
+  "pieces": {
+    "function": {
+      "title": "The Function keyword",
+      "content": "This is a JavaScript keyword that declares a <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions' target='_blank' rel='noopener'>function</a>. The whole TC is what they call an <a href='https://developer.mozilla.org/en-US/docs/Glossary/IIFE' target='_blank' rel='noopener'>IIFE</a> (pronounced 'iffy', but you shouldn't feel that way throughout this journey!)"
+    },
+    "function-parameters": {
+      "title": "Function Parameters",
+      "content": "These are <a href='https://developer.mozilla.org/en-US/docs/Glossary/Parameter' target='_blank' rel='noopener'>function parameters</a>, values that can be passed to the function. <br><br>They can be named anything, it could read <code>(o, r, a, n, g, e)</code> and it would still work as long as the same variable names are changed in the function body"
+    },
+    "property-access": {
+      "title": "Property access",
+      "content": "An example of accessing the value of a property inside an object. In this case, the property <code>hj</code> is being accessed inside the <code>h</code> variable/object.<br><br>In this case, you can see in <span id='line7' class='line'>line 7</span> of the TC that the first argument passed to the function is <code>window</code> which refers to the <a href='https://developer.mozilla.org/en-US/docs/Web/API/Window' target='_blank' rel='noopener'>global Window object</a>. Since the first parameter of the function is called <code>h</code> we can reference the global window object within the function as <code>h</code>"
+    },
+    "assignment": {
+      "title": "Assignment (not a homework)",
+      "content": "When you put a value in a variable, it's called Variable Assignment. Here, we're saying that <code>h.hj</code> should be assigned the value <code>h.hj</code> (itself, if it exists). <br><br> Whenever you see statements like <code>something = whatever</code> that's an assignment, the trick is the single equals <code>=</code> sign. <em>More than one means something else.</em>"
+    },
+    "logical-or": {
+      "title": "Logical OR operator",
+      "content": "When you want to say that something should happen when either of a pair (or more) conditions are <code>true</code> (<em>evaluate to <code>true</code></em> is the proper term), you can use the Logical OR operator which in JS is simply <code>||</code> (two pipe characters).<br><br>Here, OR is saying that if <code>h.hj=h.hj</code> can't happen because that object doesn't exist yet (<em>evaluates to <code>false</code></em>), then the expression to the right of the <code>||</code> should be assigned to <code>h.hj</code>.<br><br>This is useful because if Hotjar already loaded, we don't have to load it again and just assign the current Hotjar global to itself, but if this is the first time we try to load Hotjar, then everything to the right of the OR operator will run."
+    },
+    "queue": {
+      "title": "Queueing Hotjar calls",
+      "content": "Here we see a similar construct as we just saw, trying to assign a variable to itself if it exists, OR <code>||</code>  assigning it the value to the right of the pipes.<br><br>In this case, we're looking for the Hotjar <code>q</code> global (or the queue), which is an Array we use to store calls to APIs such as Events and User Attributes while Hotjar hasn't loaded fully so that they may be sent later to Hotjar once it loads.<br><br>The <code>[]</code> here means an Array literal that's empty."
+    },
+    "push": {
+      "title": "Array.prototype.push()",
+      "content": "<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push' target='_blank' rel='noopener'>Push</a> is an Array method that <em>pushes</em> a value inside an array as the last index/element in that array, if the array is empty, it would be the first and last element, of course.<br><br><a href='https://developer.mozilla.org/en-US/docs/Glossary/Method' target='_blank' rel='noopener'>Method</a> is a very common term in programming, it means a function that is a property of an object. In JS, almost everything is an object or an instance of an object, including strings, numbers, and in this case, arrays."
+    },
+    "arguments": {
+      "title": "The arguments object",
+      "content": "This is where the magic starts happening! At this point, we have a complete and working statement that has some of the barebones functionality that ships with Hotjar.<br><br><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments' target='_blank' rel='noopener'>The arguments object</a> is a collection of all the arguments (values passed in the parenthesis) passed to a function, in this case, the <code>hj</code> function that was just declared.<br><br>Try it out yourself, run this line of code <code>window.hj=window.hj||function(){(window.hj.q=window.hj.q||[]).push(arguments)}</code> in your browser Console and then try sending anything using the <code>hj()</code> function, it can be an Event as you might have seen such as <code>hj('event', 'my_wondeful_event')</code> or a flerbo <code>hj('flerbo', 'bleepbloop')</code> or even an emoji <code>hj('🥓', 'tasty')</code> Unfortunately, sending bacon to Hotjar, or anything not in our APIs, won't do anything once Hotjar is loaded, the command would just be rejected, but it's a cool way to start understanding how Hotjar works under the hood."
+    }
+  },
+  "tc-lines": {
+    "line1": "(function(h,o,t,j,a,r){",
+    "line2": "h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};",
+    "line3": "h._hjSettings={hjid:1440670,hjsv:6}; a=o.getElementsByTagName('head')[0];",
+    "line4": "r=o.createElement('script');r.async=1;",
+    "line5": "r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;",
+    "line6": "a.appendChild(r);",
+    "line7": "<code>})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</code>"
+  }
+}
+
+
