@@ -1,4 +1,4 @@
-import content from '/store/content.json' assert { type: 'json' };
+import content from '../../../store/content.json' assert { type: 'json' };
 
 function handlePopoverShown(event) {
   let id = '#' + event.target.getAttribute('aria-describedby');
